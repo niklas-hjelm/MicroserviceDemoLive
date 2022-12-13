@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservices", "Microservices", "{6F739C31-D2A2-4056-9C8E-12F0A97F9F58}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{78156536-5805-471D-A7CD-0C8AC342DB27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeroApi", "HeroApi\HeroApi.csproj", "{90F23BBC-52A3-4EB4-AE88-926570991300}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{29403C5C-4E64-48A3-926D-B49EC690F410}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90F23BBC-52A3-4EB4-AE88-926570991300}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90F23BBC-52A3-4EB4-AE88-926570991300}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90F23BBC-52A3-4EB4-AE88-926570991300}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90F23BBC-52A3-4EB4-AE88-926570991300}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29403C5C-4E64-48A3-926D-B49EC690F410}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29403C5C-4E64-48A3-926D-B49EC690F410}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29403C5C-4E64-48A3-926D-B49EC690F410}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29403C5C-4E64-48A3-926D-B49EC690F410}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{90F23BBC-52A3-4EB4-AE88-926570991300} = {6F739C31-D2A2-4056-9C8E-12F0A97F9F58}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {77F6BCC2-50EB-4BA6-9563-3D0C6907D223}
+	EndGlobalSection
+EndGlobal

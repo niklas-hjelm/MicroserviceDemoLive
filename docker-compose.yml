@@ -1,0 +1,31 @@
+version: '3.4'
+
+networks:
+  backend:
+services:
+  herolivedb:
+    container_name: hero-live-db
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports:
+      - 8005:1433
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=Password123!!
+      - MSSQL_PID=Developer
+    networks:
+      - backend
+  heroapi:
+    image: ${DOCKER_REGISTRY-}heroapi
+    build:
+      context: .
+      dockerfile: HeroApi/Dockerfile
+    networks:
+      - backend
+    ports:
+      - 8006:80
+    depends_on:
+      - herolivedb
+    environment:
+      - DB_HOST=herolivedb
+      - DB_NAME=HeroDbLive
+      - DB_MSSQL_SA_PASSWORD=Password123!!
