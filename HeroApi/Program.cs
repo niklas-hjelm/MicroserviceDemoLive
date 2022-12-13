@@ -1,7 +1,7 @@
 using HeroApi.DataAccess.Contexts;
-using HeroApi.DataAccess.Models;
 using HeroApi.DataAccess.Repositories;
 using HeroApi.Extensions;
+using MediatR;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,7 +10,10 @@ var database = Environment.GetEnvironmentVariable("DB_NAME");
 var password = Environment.GetEnvironmentVariable("DB_MSSQL_SA_PASSWORD");
 var connectionString =
     $"Data Source={host};Initial Catalog={database};User ID=sa;Password={password};Trusted_connection=False;TrustServerCertificate=True;";
+
 builder.Services.AddSqlServer<HeroContext>(connectionString);
+
+builder.Services.AddMediatR(x => x.AsScoped(), typeof(Program));
 
 builder.Services.AddTransient<IHeroRepository, HeroRepository>();
 
