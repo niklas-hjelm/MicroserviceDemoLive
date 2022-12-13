@@ -23,7 +23,6 @@ services:
       - backend
     ports:
       - 8006:80
-      - 8007:443
     depends_on:
       - herolivedb
     environment:
